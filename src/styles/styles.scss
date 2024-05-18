@@ -1,0 +1,11 @@
+@import "./app/_fonts";
+@import "bootstrap";
+
+body {
+  font-family: 'SERAFIM+slovo', serif;
+  letter-spacing: normal;
+  line-height: 1.2rem;
+  color: hsl(198deg, 0%, 40%);
+  background: hsl(198deg, 0%, 98%);
+  overflow: hidden;
+}

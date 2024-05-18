@@ -1,0 +1,16 @@
+.body--layout {
+  display: flex;
+  height: 100%;
+  gap: 26px;
+
+  .sidebar {
+    background: #E3EAED;
+    border-right: 2px solid #DDDDDD;
+    width: 260px;
+  }
+
+  .content {
+    flex: 1;
+    padding-right: 26px;
+  }
+}
