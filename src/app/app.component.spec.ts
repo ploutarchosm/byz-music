@@ -1,11 +1,23 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { NgxsModule, Store } from '@ngxs/store';
+import { ApplicationState } from '@store/state';
+import { ChangeLanguage, SetPage } from '@store/action';
 
 describe('AppComponent', () => {
+  let store: Store;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [
+        AppComponent,
+        TranslateModule.forRoot(),
+        NgxsModule.forRoot([ApplicationState]),
+      ],
     }).compileComponents();
+
+    store = TestBed.inject(Store);
   });
 
   it('should create the app', () => {
@@ -14,18 +26,17 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'byzantine-music' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('byzantine-music');
+  it('should dispatch language', () => {
+    store.dispatch(new ChangeLanguage('el'));
+
+    const feed = store.selectSnapshot(state => state.app.language);
+    expect(feed).toBe('el');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Hello, byzantine-music'
-    );
+  it('should dispatch page title', () => {
+    store.dispatch(new SetPage('Home Page'));
+
+    const feed = store.selectSnapshot(state => state.app.page);
+    expect(feed).toBe('Home Page');
   });
 });

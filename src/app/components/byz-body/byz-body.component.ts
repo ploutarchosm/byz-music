@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './byz-body.component.html',
-  styleUrl: './byz-body.component.scss'
+  styleUrl: './byz-body.component.scss',
 })
-export class ByzBodyComponent {
-
-}
+export class ByzBodyComponent {}

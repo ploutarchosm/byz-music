@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './byz-auth-layout.component.html',
-  styleUrl: './byz-auth-layout.component.scss'
+  styleUrl: './byz-auth-layout.component.scss',
 })
-export class ByzAuthLayoutComponent {
-
-}
+export class ByzAuthLayoutComponent {}

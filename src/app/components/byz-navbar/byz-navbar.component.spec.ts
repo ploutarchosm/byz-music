@@ -8,10 +8,9 @@ describe('ByzNavbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ByzNavbarComponent]
-    })
-    .compileComponents();
-    
+      imports: [ByzNavbarComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ByzNavbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
