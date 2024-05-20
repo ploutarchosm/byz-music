@@ -13,8 +13,7 @@ import { ByzMainLayoutComponent } from '@components/byz-main-layout/byz-main-lay
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, ByzMainLayoutComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  template: '<router-outlet />',
 })
 export class AppComponent implements OnInit {
   private state$ = this.store.select<AppStateModel>(state => state.app);

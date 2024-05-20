@@ -23,6 +23,7 @@
       "@env/*": ["environments/*"],
       "@components/*": ["app/components/*"],
       "@services/*": ["app/services/*"],
+      "@pages/*": ["app/pages/*"],
       "@store/*": ["app/store/*"]
     }
   },
