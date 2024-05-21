@@ -8,10 +8,9 @@ describe('ByzHomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ByzHomeComponent]
-    })
-    .compileComponents();
-    
+      imports: [ByzHomeComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ByzHomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ByzBodyComponent } from './byz-body.component';
+import { NgxsModule } from '@ngxs/store';
+import { ApplicationState } from '@store/state';
 
 describe('ByzBodyComponent', () => {
   let component: ByzBodyComponent;
@@ -8,7 +9,7 @@ describe('ByzBodyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ByzBodyComponent],
+      imports: [ByzBodyComponent, NgxsModule.forRoot([ApplicationState])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ByzBodyComponent);

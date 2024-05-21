@@ -1,8 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 import { ByzTitleStrategyService } from './byz-title-strategy.service';
-import { TranslateModule } from '@ngx-translate/core';
-import { NgxsModule } from '@ngxs/store';
-import { ApplicationState } from '@store/state';
 import { Title } from '@angular/platform-browser';
 
 describe('ByzTitleStrategyService', () => {
@@ -10,10 +7,6 @@ describe('ByzTitleStrategyService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        TranslateModule.forRoot(),
-        NgxsModule.forRoot([ApplicationState]),
-      ],
       providers: [
         Title,
         {

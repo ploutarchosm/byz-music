@@ -3,11 +3,6 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'main',
-    pathMatch: 'full',
-  },
-  {
-    path: 'main',
     loadComponent: () =>
       import('@components/byz-main-layout/byz-main-layout.component').then(
         c => c.ByzMainLayoutComponent
@@ -19,6 +14,15 @@ export const routes: Routes = [
           import('@pages/byz-home/byz-home.component').then(
             c => c.ByzHomeComponent
           ),
+        title: '_i18n.Home',
+      },
+      {
+        path: 'music-docs',
+        loadComponent: () =>
+          import('@pages/byz-editor/byz-editor.component').then(
+            c => c.ByzEditorComponent
+          ),
+        title: '_i18n.MusicDocs',
       },
     ],
   },
